@@ -1,17 +1,18 @@
-# Note-Taking-Console-App
+# A Relational database Model Illustration
 
-The Note taking Application is developed using javascript functions and constructors
+This repository contains an image file that illustrates a relational Database model with object, entities and relationships
 
-It has the following features:
+The sample model entails a typical University with a Faculty has Dean, Hod, Lecturers, Undergraduates and Postgraduates
 
-Create: creates a new note 
+The following queries would relate to the relationship between the entities:
 
-listNotes: generates a list of all entered notes 
+Sample Insert Query: INSERT into undergrad_students (undergrad_student_id, undergrad_student_name, undergrad_student_matric_number, undergrad_student_dept, undergrad_student_course, undergrad_student_faculty) VALUES (1,
+'Jacky',011321,'English Department', 'General Studies' ,'Arts');
 
-getNote: makes changes to an existing note(s) by first identifying it's Note ID
+Sample Select Query: SELECT FROM postgrad_students WHERE undergrad_student_name LIKE '%Joy';
 
-searchNotes: search for an available note by it's content
+Sample Count Query: SELECT COUNT(hod_name) FROM hod_dept;
 
-editNotes: modifies an existing note
+Sample Inner Join Query:  SELECT dean.dean_id, undergrad_student.undergrad_student_name, dean.dean_course, FROM dean INNER JOIN undergrad_student ON dean.dean_id=undergrad_student.undergrad_student_id;
 
-deleteNotes: removes an unwanted note
+Sample Update Query: UPDATE lecturer SET name='Adegbola', course='General Studies', WHERE name='Adegola';
